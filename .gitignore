@@ -1,0 +1,4 @@
+__pycache__/
+server.py
+test_api.py
+.env
