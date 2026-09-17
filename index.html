@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArrayLab — Learn Arrays with Python</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">A</div>
+        <div>
+          <div class="brand">Array<span>Lab</span></div>
+          <div class="brand-subtitle">Learn by building intuition</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <div class="track-pill"><span class="dot"></span> Python track</div>
+        <button class="icon-button" id="resetProgress" title="Reset progress">↻</button>
+        <div class="avatar">MM</div>
+      </div>
+    </header>
+
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="course-heading">
+          <div class="eyebrow">DSA FOUNDATION · 01</div>
+          <h1>Arrays</h1>
+          <p>Build the core patterns you’ll use everywhere in DSA.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-row"><span>Your progress</span><strong id="progressPercent">0%</strong></div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          <div class="progress-meta"><span id="completedCount">0 of 8 lessons</span><span>~2.5 hours</span></div>
+        </div>
+        <nav class="lesson-nav" id="lessonList" aria-label="Array lessons"></nav>
+        <div class="sidebar-footer">
+          <div class="streak-icon">✦</div>
+          <div><strong>Keep the streak alive</strong><span>One concept at a time.</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="content-topline"><span>DSA FOUNDATION</span><span class="slash">/</span><span>ARRAYS</span><span class="slash">/</span><span id="currentIndex">01</span></div>
+        <section class="lesson-header">
+          <div>
+            <div class="lesson-tag" id="lessonTag">CONCEPT</div>
+            <h2 id="lessonTitle">What is an array?</h2>
+            <p id="lessonObjective">Understand how arrays store ordered data and how to access each value efficiently.</p>
+          </div>
+          <div class="lesson-actions"><span class="duration" id="lessonDuration">12 min lesson</span><button class="complete-button" id="completeButton">Mark complete <span>✓</span></button></div>
+        </section>
+
+        <div class="learning-grid">
+          <article class="lesson-card">
+            <div id="lessonBody"></div>
+            <div class="lesson-nav-buttons"><button class="secondary-button" id="previousButton">← Previous</button><button class="primary-button" id="nextButton">Next lesson <span>→</span></button></div>
+          </article>
+
+          <aside class="practice-card">
+            <div class="practice-card-header"><div><div class="eyebrow">PRACTICE ZONE</div><h3>Try it yourself</h3></div><span class="python-badge">.py</span></div>
+            <p class="practice-intro">Change the code, run it, and connect the idea to a real problem.</p>
+            <label class="field-label" for="codeEditor">Python playground</label>
+            <textarea id="codeEditor" class="code-editor" spellcheck="false"></textarea>
+            <div class="editor-actions"><button class="run-button" id="runButton">▶ Run example</button><button class="clear-button" id="resetCode">Reset</button></div>
+            <div class="output-box"><div class="output-label"><span>OUTPUT</span><span id="runStatus">Ready</span></div><pre id="output">Run the example to see the output.</pre></div>
+          </aside>
+        </div>
+
+        <section class="problem-section">
+          <div class="section-heading"><div><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h3>Practice problems</h3></div><span class="problem-count" id="problemCount">1 problem</span></div>
+          <div id="problemList" class="problem-list"></div>
+          <div class="problem-workspace" id="problemWorkspace" hidden>
+            <div class="problem-copy"><button class="back-link" id="closeProblem">← Back to problems</button><div class="difficulty" id="problemDifficulty">EASY</div><h3 id="problemTitle"></h3><p id="problemDescription"></p><div class="examples" id="problemExamples"></div><div class="hint-box"><div class="hint-title">Need a nudge?</div><p id="problemHint"></p></div></div>
+            <div class="submission-panel"><label class="field-label" for="problemEditor">Your solution</label><textarea id="problemEditor" class="code-editor problem-editor" spellcheck="false"></textarea><button class="primary-button submit-button" id="submitButton">Submit solution <span>→</span></button><div class="submission-result" id="submissionResult">Your result will appear here.</div></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
